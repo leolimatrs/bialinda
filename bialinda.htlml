@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Amada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Para Minha Bia <span class="heart"><i class="fas fa-heart"></i></span></h1>
+            <p class="subtitle">Cada momento contigo é um presente</p>
+            
+            <div class="love-timer">
+                <div class="timer-title">Te amo há:</div>
+                <div class="timer" id="loveCounter">
+                    <div class="timer-box">
+                        <div class="timer-value" id="years">0</div>
+                        <div class="timer-label">anos</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-value" id="months">0</div>
+                        <div class="timer-label">meses</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-value" id="days">0</div>
+                        <div class="timer-label">dias</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-value" id="hours">0</div>
+                        <div class="timer-label">horas</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-value" id="minutes">0</div>
+                        <div class="timer-label">minutos</div>
+                    </div>
+                    <div class="timer-box">
+                        <div class="timer-value" id="seconds">0</div>
+                        <div class="timer-label">segundos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="message">
+            <h2>Meu Amor,</h2>
+            <p>Este site é um pequeno presente para lembrar o quanto você é especial para mim. Cada dia ao seu lado é uma bênção.</p>
+            <!-- Adicione sua mensagem pessoal aqui -->
+        </div>
+
+        <h2>Nossos Momentos <span class="heart"><i class="fas fa-heart"></i></span></h2>
+        <div class="photo-gallery">
+            <!-- Adicione suas fotos aqui (substitua os src pelas suas imagens) -->
+            <div class="photo-frame">
+                <img src="foto1.jpg" alt="Nosso momento">
+                <div class="photo-caption">Primeiro encontro</div>
+            </div>
+            <div class="photo-frame">
+                <img src="foto2.jpg" alt="Nosso momento">
+                <div class="photo-caption">Viagem inesquecível</div>
+            </div>
+            <div class="photo-frame">
+                <img src="foto3.jpg" alt="Nosso momento">
+                <div class="photo-caption">Comemoração especial</div>
+            </div>
+            <!-- Adicione mais fotos conforme necessário -->
+        </div>
+
+        <h2>Nossa Música <span class="heart"><i class="fas fa-heart"></i></span></h2>
+        <div class="music-player">
+            <!-- Substitua o link pelo seu embed do Spotify ou outro player -->
+            <iframe src="https://open.spotify.com/embed/track/31niecatcthench5pxcae3a6z2xm" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Feito com <i class="fas fa-heart"></i> para você, hoje e sempre</p>
+        </div>
+    </footer>
+
+    <script>
+        // Contador de relacionamento preciso
+        function updateLoveTimer() {
+            const startDate = new Date('2024-06-15T00:00:00');
+            const now = new Date();
+            
+            let totalSeconds = Math.floor((now - startDate) / 1000);
+            
+            const years = Math.floor(totalSeconds / (60 * 60 * 24 * 365));
+            totalSeconds -= years * 60 * 60 * 24 * 365;
+            
+            const months = Math.floor(totalSeconds / (60 * 60 * 24 * 30.44));
+            totalSeconds -= months * 60 * 60 * 24 * 30.44;
+            
+            const days = Math.floor(totalSeconds / (60 * 60 * 24));
+            totalSeconds -= days * 60 * 60 * 24;
+            
+            const hours = Math.floor(totalSeconds / (60 * 60));
+            totalSeconds -= hours * 60 * 60;
+            
+            const minutes = Math.floor(totalSeconds / 60);
+            totalSeconds -= minutes * 60;
+            
+            const seconds = totalSeconds;
+            
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Atualiza a cada segundo
+        updateLoveTimer();
+        setInterval(updateLoveTimer, 1000);
+    </script>
+</body>
+</html>
