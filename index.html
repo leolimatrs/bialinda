@@ -5,7 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Minha Amada</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff66b3, #ff3385);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .heart {
+            color: #ff0066;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .love-timer {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .timer-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .timer-box {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .timer-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .timer-label {
+            font-size: 0.9rem;
+        }
+        
+        .message {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #ff3385;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-frame {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        .photo-frame img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .photo-caption {
+            font-weight: bold;
+            color: #ff3385;
+        }
+        
+        .music-player {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .youtube-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff3385;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .timer {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -49,12 +206,10 @@
         <div class="message">
             <h2>Meu Amor,</h2>
             <p>Este site é um pequeno presente para lembrar o quanto você é especial para mim. Cada dia ao seu lado é uma bênção.</p>
-            <!-- Adicione sua mensagem pessoal aqui -->
         </div>
 
         <h2>Nossos Momentos <span class="heart"><i class="fas fa-heart"></i></span></h2>
         <div class="photo-gallery">
-            <!-- Adicione suas fotos aqui (substitua os src pelas suas imagens) -->
             <div class="photo-frame">
                 <img src="foto1.jpg" alt="Nosso momento">
                 <div class="photo-caption">Primeiro encontro</div>
@@ -67,13 +222,14 @@
                 <img src="foto3.jpg" alt="Nosso momento">
                 <div class="photo-caption">Comemoração especial</div>
             </div>
-            <!-- Adicione mais fotos conforme necessário -->
         </div>
 
         <h2>Nossa Música <span class="heart"><i class="fas fa-heart"></i></span></h2>
         <div class="music-player">
-            <!-- Substitua o link pelo seu embed do Spotify ou outro player -->
-            <iframe src="https://open.spotify.com/embed/track/31niecatcthench5pxcae3a6z2xm" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <!-- Player do YouTube com "Um Amor Tão Puro" do Djavan -->
+            <div class="youtube-container">
+                <iframe src="https://www.youtube.com/embed/hh9WgYHRuhU?si=UizR4byp_aU-kWaQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
